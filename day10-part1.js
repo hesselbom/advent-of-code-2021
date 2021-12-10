@@ -38,15 +38,14 @@ const pointsMap = {
 
 module.exports = (input) => {
   const rows = input.split('\n')
-  const row = '{([(<{}[<>[]}>{[]{[(<()>'
-  let count = 0
+  let score = 0
 
   for (let row of rows) {
     const firstChar = row.charAt(0)
     const result = findCloser(row, { index: 1 }, closerMap[firstChar])
 
-    count += pointsMap[result] || 0
+    score += pointsMap[result] || 0
   }
 
-  return count
+  return score
 }
