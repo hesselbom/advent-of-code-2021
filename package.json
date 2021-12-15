@@ -5,6 +5,7 @@
   },
   "author": "Viktor Hesselbom",
   "dependencies": {
+    "a-star": "^0.2.0",
     "jest": "^27.4.2"
   }
 }
