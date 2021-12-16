@@ -7,9 +7,6 @@ const getBits = (numbers, from, to) => {
     to = 4 - (to - i * 4)
     return ((numbers[i] & ((1 << from) - 1) & ~(((1 << to) - 1))) >>> to)
   } else {
-    // from = 4 - (from - i * 4)
-    // to = 4 - (to - i * 4)
-    // const a = ((numbers[i] & ((1 << from) - 1) & ~(((1 << to) - 1))) >>> to)
     const breakpoint = (Math.floor(from / 4) + 1) * 4
     const bLength = to - breakpoint
     const a = getBits(numbers, from, breakpoint)
